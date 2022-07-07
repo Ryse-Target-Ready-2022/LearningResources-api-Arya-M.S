@@ -1,10 +1,12 @@
 package com.tgt.rysetii.learningresoursesapiarya.entity;
 
     import java.time.LocalDate;
+    import java.io.Serializable;
 
-public class LearningResource {
+
+public class LearningResource implements Serializable {
     private Integer learningResourceId;
-    private String productName;
+    private String learningResourceName;
     private Double costPrice;
     private Double sellingPrice;
     private LearningResourceStatus learningResourceStatus;
@@ -17,7 +19,7 @@ public class LearningResource {
 
     public LearningResource(Integer learningResourceId, String productName, Double costPrice, Double sellingPrice, LearningResourceStatus learningResourceStatus, LocalDate createdDate, LocalDate publishedDate, LocalDate retiredDate) {
         this.learningResourceId = learningResourceId;
-        this.productName = productName;
+        this.learningResourceName = learningResourceName;
         this.costPrice = costPrice;
         this.sellingPrice = sellingPrice;
         this.learningResourceStatus = learningResourceStatus;
@@ -34,11 +36,73 @@ public class LearningResource {
         this.learningResourceId = learningResourceId;
     }
 
-    public String getProductName() {
-        return productName;
+    public String getLearningResourceName() {
+        return learningResourceName;
     }
 
-    public void setProductName(String productName) {
-        this.productName = productName;
+    public void setLearningResourceNameName(String learningResourceName) {
+        this.learningResourceName = learningResourceName;
+    }
+
+    public Double getCostPrice() {
+        return costPrice;
+    }
+
+    public void setCostPrice(Double costPrice) {
+        this.costPrice = costPrice;
+    }
+
+    public Double getSellingPrice() {
+        return sellingPrice;
+    }
+
+    public void setSellingPrice(Double sellingPrice) {
+        this.sellingPrice = sellingPrice;
+    }
+
+    public LearningResourceStatus getLearningResourceStatus() {
+        return learningResourceStatus;
+    }
+
+    public void setLearningResourceStatus(LearningResourceStatus learningResourceStatus) {
+        this.learningResourceStatus = learningResourceStatus;
+    }
+
+    public LocalDate getCreatedDate() {
+        return createdDate;
+    }
+
+    public void setCreatedDate(LocalDate createdDate) {
+        this.createdDate = createdDate;
+    }
+
+    public LocalDate getPublishedDate() {
+        return publishedDate;
+    }
+
+    public void setPublishedDate(LocalDate publishedDate) {
+        this.publishedDate = publishedDate;
+    }
+
+    public LocalDate getRetiredDate() {
+        return retiredDate;
+    }
+
+    public void setRetiredDate(LocalDate retiredDate) {
+        this.retiredDate = retiredDate;
+    }
+
+    @Override
+    public String toString() {
+        return "LearningResource{" +
+                "learningResourceId=" + learningResourceId +
+                ", learningResourceName='" + learningResourceName + '\'' +
+                ", costPrice=" + costPrice +
+                ", sellingPrice=" + sellingPrice +
+                ", learningResourceStatus=" + learningResourceStatus +
+                ", createdDate=" + createdDate +
+                ", publishedDate=" + publishedDate +
+                ", retiredDate=" + retiredDate +
+                '}';
     }
 }
